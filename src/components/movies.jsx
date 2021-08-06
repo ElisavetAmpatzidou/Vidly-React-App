@@ -7,6 +7,7 @@ import ListGroup from './common/listGroup';
 import TableMovies from './tableMovies';
 import _ from 'lodash';
 import NavBar from './navbar';
+import { Link } from 'react-router-dom';
 
 class Movies extends Component {
     state = { movies : [],
@@ -77,6 +78,7 @@ class Movies extends Component {
                     />
                 </div>
                 <div className="col">
+                    <Link to="/movies/new" className="btn btn-primary">New Movie</Link>
                     <p>Showing {totalCount} movies in the database.</p>
                     <TableMovies 
                         movies={movies} 
